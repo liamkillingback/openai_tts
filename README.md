@@ -1,4 +1,4 @@
-# OpenaiTts
+# OpenaiTTS
 
 Simple Openai text to speech library
 
