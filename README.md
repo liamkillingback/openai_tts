@@ -15,6 +15,16 @@ def deps do
 end
 ```
 
+## Setup
+
+In config.exs:
+
+```elixir
+  config :openai_tts
+    api_key: "openai-api-key",
+    http_options: [recv_timeout: :infinity]
+```
+
 ## Usage
 
 ```elixir
