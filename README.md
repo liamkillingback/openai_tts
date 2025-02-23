@@ -1,6 +1,6 @@
 # OpenaiTts
 
-**TODO: Add description**
+Simple Openai text to speech library
 
 ## Installation
 
@@ -15,7 +15,35 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/openai_tts>.
+## Usage
+
+```elixir
+@doc """
+  Creates a voice file from text using OpenAI's TTS API.
+
+  ## Parameters
+  - `text` (string): The input text to convert to speech.
+  - `voice` (string, optional): The voice model to use (default: `"onyx"`).
+  - `speed` (float, optional): The speech speed (default: `1.0`).
+  - `model` (string, optional): The TTS model to use (default: `"tts-1"`).
+  - `format` (string, optional): The output file format (default: `"mp3"`).
+
+  ## Returns
+  - The response from `OpenaiTTS.TTS.create_voice/5`.
+
+  ## Example
+      iex> OpenaiTTS.create_voice("Hello world")
+      {:ok, audio_binary}
+  """
+
+
+case OpenaiTTS.create_audio("Hello World") do
+  {:ok, res} ->
+    File.write!("/path/audio.mp3", res)
+  {:error, message} ->
+    # Handle error
+    IO.inspect(message)
+end
+
+```
 
