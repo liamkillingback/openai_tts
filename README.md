@@ -4,13 +4,13 @@
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+The package can be installed
 by adding `openai_tts` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:openai_tts, "~> 0.1.0"}
+    {:openai_tts, git: "https://github.com/liamkillingback/openai_tts"}
   ]
 end
 ```
