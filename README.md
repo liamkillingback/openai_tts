@@ -47,3 +47,4 @@ end
 
 ```
 
+See [Openai TTS api docs](https://platform.openai.com/docs/api-reference/audio) for list of params & options.
